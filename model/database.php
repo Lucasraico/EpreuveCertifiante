@@ -8,7 +8,7 @@ function init_db() {
   try {
 
     $host     = 'localhost';
-    $dbname   = 'codflix';
+    $dbname   = 'codeflix';
     $charset  = 'utf8';
     $user     = 'root';
     $password = '';

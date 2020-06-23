@@ -4,6 +4,9 @@ require_once( 'controller/homeController.php' );
 require_once( 'controller/loginController.php' );
 require_once( 'controller/signupController.php' );
 require_once( 'controller/mediaController.php' );
+require_once( 'controller/historiqueController.php' );
+require_once( 'controller/favoriteController.php');
+require_once( 'controller/contactUsController.php');
 
 /**************************
 * ----- HANDLE ACTION -----
@@ -30,6 +33,24 @@ if ( isset( $_GET['action'] ) ):
 
       logout();
 
+    break;
+
+    case 'historique':
+
+      historiquePage();
+    
+    break;
+
+    case 'favorite':
+
+      favoritePage();
+    
+    break;
+
+    case 'contactUs':
+
+      contactUs();
+    
     break;
 
   endswitch;
