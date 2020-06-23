@@ -93,7 +93,7 @@ class Media {
     // Open database connection
     $db   = init_db();
 
-    $req  = $db->prepare( "SELECT * FROM media " );
+    $req  = $db->prepare( "SELECT * FROM media" );
     $req->execute( array( '%' . $title . '%' ));
 
     // Close databse connection
@@ -102,5 +102,23 @@ class Media {
     return $req->fetchAll();
 
   }
+
+  public static function getDetailMedia( $id ) {
+
+    // Open database connection
+    $db   = init_db();
+
+    $req  = $db->prepare( "SELECT * FROM media WHERE id = ".$id );
+    $req->execute( array( '%' . $id . '%' ));
+
+    // Close databse connection
+    $db   = null;
+
+    return $req->fetchAll();
+
+  }
+
+
+
 
 }

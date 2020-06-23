@@ -7,6 +7,7 @@ require_once( 'controller/mediaController.php' );
 require_once( 'controller/historiqueController.php' );
 require_once( 'controller/favoriteController.php');
 require_once( 'controller/contactUsController.php');
+require_once( 'controller/detailController.php');
 
 /**************************
 * ----- HANDLE ACTION -----
@@ -50,6 +51,12 @@ if ( isset( $_GET['action'] ) ):
     case 'contactUs':
 
       contactUs();
+    
+    break;
+
+    case 'detailMedia':
+
+      mediaDetail();
     
     break;
 
