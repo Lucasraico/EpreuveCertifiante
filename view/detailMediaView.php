@@ -15,6 +15,7 @@
 <p><?php echo($detail[0]['release_date']) ?></p>
 <p><?php echo($detail[0]['summary']) ?></p>
 
+
 <?php $content = ob_get_clean(); ?>
 
 <?php require('dashboard.php'); ?>

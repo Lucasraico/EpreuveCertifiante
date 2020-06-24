@@ -8,6 +8,7 @@ require_once( 'controller/historiqueController.php' );
 require_once( 'controller/favoriteController.php');
 require_once( 'controller/contactUsController.php');
 require_once( 'controller/detailController.php');
+require_once( 'controller/userController.php');
 
 /**************************
 * ----- HANDLE ACTION -----
@@ -27,8 +28,12 @@ if ( isset( $_GET['action'] ) ):
     case 'signup':
 
       signupPage();
+        if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['password_confirm']) ){
+          verificationSignUpForm($_POST);
+        }
 
     break;
+    
 
     case 'logout':
 
@@ -59,6 +64,13 @@ if ( isset( $_GET['action'] ) ):
       mediaDetail();
     
     break;
+
+    case 'settingProfil':
+
+      myProfile();
+
+    break;
+
 
   endswitch;
 

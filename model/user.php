@@ -84,6 +84,7 @@ class User {
       'password'  => $this->getPassword()
     ));
 
+
     // Close databse connection
     $db = null;
 

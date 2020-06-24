@@ -92,17 +92,22 @@ class Media {
 
     // Open database connection
     $db   = init_db();
+    if ( !isset($_GET['title'])){
+      $req = $db->prepare( " SELECT * FROM media ");
+      $req->execute( array( '%' . $title . '%' ));
 
-    $req  = $db->prepare( "SELECT * FROM media" );
-    $req->execute( array( '%' . $title . '%' ));
+    }
+    else if ( isset($_GET['title'])){
+      $req  = $db->prepare( "SELECT * FROM media WHERE title LIKE '%{$title}%' ");
+      $req->execute( array( '%' . $title . '%' ));
 
+    }
     // Close databse connection
     $db   = null;
 
-    return $req->fetchAll();
-
+    return $req->fetchAll(); 
   }
-
+  
   public static function getDetailMedia( $id ) {
 
     // Open database connection
@@ -122,3 +127,4 @@ class Media {
 
 
 }
+

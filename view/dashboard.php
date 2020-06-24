@@ -22,6 +22,7 @@
             <li><a href="index.php?action=contactUs">Nous contacter</a></li>
             <li><a href="index.php?action=historique">Historique</a></li>
             <li><a href="index.php?action=favorite">Vos favoris</a></li>
+            <li><a href="index.php?action=settingProfil">Mon profil</a></li>
             <li><a href="index.php?action=logout">Me déconnecter</a></li>
           </ul>
         </div>

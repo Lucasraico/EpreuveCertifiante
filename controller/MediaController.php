@@ -14,4 +14,3 @@ function mediaPage() {
   require('view/mediaListView.php');
 
 }
-
