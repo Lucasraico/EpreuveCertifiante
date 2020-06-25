@@ -29,7 +29,7 @@
       </nav>
 
         <!-- Page Content  -->
-      <div id="content">
+      <div id="content" class="bg-red">
         <div class="header">
           <h2 class="title">Cod<span>'Flix</span></h2>
           <div class="toggle-menu d-block d-md-none">
@@ -39,7 +39,7 @@
             </button>
           </div>
         </div>
-        <div class="content p-4">
+        <div class="content p-4 ">
           <?= $content; ?>
         </div>
         <footer>Copyright Cod'Flix</footer>

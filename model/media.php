@@ -123,6 +123,13 @@ class Media {
 
   }
 
+
+  
+  /***************************
+  * -------- GET Series information --------
+  ***************************/
+
+
   public static function detailSeason( $id , $season_id ) {
 
     // Open database connection

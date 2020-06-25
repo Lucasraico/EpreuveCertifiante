@@ -11,8 +11,21 @@
 <?php }else{ ?>
 
     <!--INFORMATIONS MEDIA  -->
-<div>  
-    <p><?php echo($detail[0]['title'])?></p>
+<div class="col-md-10 offset-md-1 bg-white">  
+    <p ><?php echo($detail[0]['title'])?></p>
+    <p>
+    
+    
+    <div class="video">
+                <div>
+                    <iframe allowfullscreen="" frameborder="0"
+                            src="<?= $detail[0]['trailer_url']; ?>" ></iframe>
+                </div>
+    </div> 
+    
+    
+    
+    </p>
     <p><?php echo($detail[0]['type'])?></p>
     <p><?php echo($detail[0]['status'])?></p>
     <p><?php echo($detail[0]['release_date'])?></p>

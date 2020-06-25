@@ -1,6 +1,6 @@
 <?php ob_start(); ?>
 
-<div>
+<div class="text-white">
 <p>La page historique est en contruction</p>
 
 </div>

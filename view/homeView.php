@@ -1,5 +1,5 @@
 <?php ob_start(); ?>
-
+<!--IT'S CONTAINS THE HOME VIEW PAGE  -->
 <div id="home">
     <div class="banner">
         <div class="container">

@@ -1,9 +1,9 @@
 <?php
 
-require_once( 'model/media.php' );
+require_once( 'model/user.php' );
 
 /***************************
-* ----- LOAD HOME PAGE -----
+On page Contact us we will get a function for send a mail to staff of Cod'flix
 ***************************/
 
 function contactUs() {
