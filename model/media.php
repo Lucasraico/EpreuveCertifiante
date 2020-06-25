@@ -123,7 +123,53 @@ class Media {
 
   }
 
+  public static function detailSeason( $id , $season_id ) {
 
+    // Open database connection
+    $db   = init_db();
+
+    if($season_id !== null){ // If user selected a season
+      $req  = $db->prepare( "SELECT * FROM episode WHERE media_id = ".$id." AND season = ".$season_id );
+      $req->execute( array( '%' . $id . '%') );
+    }else{                    // If not
+      $req  = $db->prepare( "SELECT * FROM episode WHERE media_id = ".$id );
+      $req->execute( array( '%' . $id . '%') );
+    }
+
+
+
+    // Close databse connection
+    $db   = null;
+
+    return $req->fetchAll();
+  }
+
+  public static function getNbSeason( $id ) {
+
+    // Open database connection
+    $db   = init_db();
+
+    $req  = $db->prepare( "SELECT COUNT(DISTINCT season) FROM episode WHERE media_id = ".$id );
+    $req->execute( array( '%' . $id . '%') );
+
+    // Close databse connection
+    $db   = null;
+
+    return $req->fetchAll();
+
+  }
+
+  public static function detailEpisode( $id ) {
+
+    $db   = init_db();
+
+    $req  = $db->prepare( "SELECT * FROM episode WHERE id = ".$id );
+    $req->execute( array( '%' . $id . '%') );
+
+    $db   = null;
+
+    return $req->fetchAll();
+  }
 
 
 }
